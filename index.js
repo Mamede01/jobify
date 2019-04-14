@@ -112,7 +112,7 @@ app.post('/admin/vagas/editarCat/:id', async(req, res) => {
     await db.run(`update categorias set categoria = '${titulo}' where id = ${id}`)
     res.redirect('/admin/categorias')
    })
-
+//comment
 
 //Banco
 const init = async() => {
