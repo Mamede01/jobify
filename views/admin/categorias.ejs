@@ -1,0 +1,23 @@
+    <%- include('header') %>
+        
+            
+         
+        <h2>
+            Admin Categoria:
+            <a href="/admin/vagas/novaCat"> Nova Categoria</a>
+        </h2>
+        <div>
+            
+            <ul>
+                <% cat.forEach( categor => { %> 
+                <li>
+                    <%- categor.categoria %> | 
+                    <a href="/admin/vagas/deleteCat/<%- categor.id%>">Excluir</a>
+                    <a href="/admin/vagas/editarCat/<%- categor.id%>">Editar</a>
+                </li>
+                <% }) %>
+            </ul>
+        </div>
+        
+         
+    <%- include('footer') %>
