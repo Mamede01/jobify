@@ -5,6 +5,7 @@ const bodyParser = require('body-parser')
 const sqlite = require('sqlite')
 const dbConnection = sqlite.open('banco.sqlite', { Promise })
 
+const port = process.env.PORT || 3000
 
 app.set('view engine', 'ejs')//renderiso a pagina HTML em outro modudo utilizando ejs
 app.use(express.static('public'))
@@ -132,7 +133,7 @@ const init = async() => {
 }
 init()
 
-app.listen(3000, (err) => {
+app.listen(port, (err) => {
     if(err){
         console.log('Não foi possivel iniciar o servidor Jobiby')
     }else{
